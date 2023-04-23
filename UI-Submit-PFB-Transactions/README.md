@@ -2,7 +2,7 @@
 
 ## Description
 
-Create a UI for allowing users to submit PayForBlob Transactions. You can check out the Node tutorial here. It shows you how you can call the API in order to submit a PFB transaction, and how to retrieve the data by block height and namespace.
+Create a UI for allowing users to submit PayForBlob Transactions.
 
 ## Node version: v16.19.0
 ## Yarn version: v1.22.19
