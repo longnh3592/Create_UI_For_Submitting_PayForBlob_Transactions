@@ -13,7 +13,7 @@ import {
 import signInImage from "assets/img/signInImage.png";
 import GradientBorder from "components/GradientBorder/GradientBorder";
 
-function FormPFB({onSubmit, onChange, isSubmitting}) {
+function FormPFB({onSubmit, onChange, isSubmitting, generate, formData}) {
   const titleColor = "white";
 
   return (
@@ -68,6 +68,7 @@ function FormPFB({onSubmit, onChange, isSubmitting}) {
                   h='46px'
                   placeholder='Input your namespace_id'
                   onChange={(e) => onChange("namespace_id", e.target.value)}
+                  value={formData?.namespace_id || ""}
                 />
               </GradientBorder>
             </FormControl>
@@ -95,9 +96,23 @@ function FormPFB({onSubmit, onChange, isSubmitting}) {
                   type='text'
                   placeholder='Input your data'
                   onChange={(e) => onChange("data", e.target.value)}
+                  value={formData?.data || ""}
                 />
               </GradientBorder>
             </FormControl>
+            <Button
+              variant='brand'
+              fontSize='16px'
+              type='submit'
+              w='100%'
+              maxW='350px'
+              h='45'
+              mb='20px'
+              mt='20px'
+              onClick={generate}
+            >
+              Generate namespace_id and data
+            </Button>
             <Button
               isLoading={isSubmitting}
               loadingText='Submitting'
